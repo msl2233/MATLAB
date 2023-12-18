@@ -170,3 +170,10 @@ TauSbar= TauStd./sqrt(4);
 x=TauMaxcalc;
 xbar= TauAve;
 tExp=(TauMaxmeasured-xbar)./TauSbar
+if tExp(1:1) < 2.314
+  result=(' t experiment < t hyopothesis, can accept null hypothesis at given confidence');
+disp(result)
+else 
+    notvalid=('t experiment > t hyopothesis, can reject null hypothesis at given confidence');
+    disp(notvalid)
+end
